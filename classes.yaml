@@ -1,0 +1,9 @@
+classes:
+  - id: 1
+    name: "Round Worm"
+  - id: 2
+    name: "Hook Worm"
+  - id: 3
+    name: "whip Worm"
+  - id: 4
+    name: "kik Worm"
