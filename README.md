@@ -4,191 +4,194 @@ Venus Image Annotator is a fast, user-friendly, and modern tool for drawing boun
 
 ---
 
-## 🚀 Features
+## 🖥️ Download
 
-- 🎯 **Draw Bounding Boxes** by click + drag
-- 🎨 **Class Editor GUI**: Easily add, remove, or update class names and IDs
-- 🔁 **Auto-save annotations** when navigating between images
-- 🔍 **Zoom with mouse wheel** (anchored around cursor)
-- ⌨️ **Keyboard Shortcuts**:
-  - `Spacebar` → next image
-  - `1`–`9` → quick class selection
-- 🔧 **Edit Classes GUI** to manage labels (with color auto-assignment)
-- 🧽 **Erase a box** with `Ctrl + Click`
-- ❌ **Remove all boxes** and auto-delete label + image copy from output folder
-- 🔄 **Auto-load previous annotations** if available
-- 🧠 **Supports dynamic classes** (no need to edit YAML manually!)
+👉 [Click here to download the latest VIA application (.exe)](https://github.com/YourUsername/YourRepo/releases/download/v1.0.0/VIA.application)
+
+> ✅ No installation needed — just run it!
 
 ---
 
-## 📁 Folder Structure
+## 💎 Why Venus Annotator is Better Than Most Annotation Tools
 
-After selecting your **input image folder** and **output folder**, the structure will be:
+While most open-source annotation tools offer basic box drawing and label saving, **Venus Annotator** focuses on **developer ease, speed, and flexibility**. Here's what makes it stand out:
 
-```
+### ✅ 1. Dynamic Class System with GUI Editor
+- Easily add, remove, or update classes via the GUI
+- Colors are auto-assigned from a friendly palette
+
+### ✅ 2. Auto Cleanup of Empty Annotations
+- Deletes `.txt` labels and copied image if no boxes are drawn
+
+### ✅ 3. Portable EXE — No Install Needed
+- No Python or extra steps — just run the app
+
+### ✅ 4. Smart Navigation & Shortcuts
+- `Space` to go to next image
+- `1–9` to switch classes
+- Zoom with mouse wheel
+
+### ✅ 5. YOLO Format Ready + Customizable
+- Saves in YOLO format (class_id x_center y_center width height)
+- Auto-loads existing annotations
+
+### ✅ 6. Friendly Codebase (PyQt5)
+- Modular, readable, and easy to contribute to
+
+---
+
+## 🚀 Features
+
+- 🎯 Draw Bounding Boxes with click + drag  
+- 🎨 Class Editor GUI for label management  
+- 🔁 Auto-save annotations on image switch  
+- 🔍 Zoom with mouse wheel (anchored)  
+- ⌨️ Keyboard Shortcuts:  
+  - `Spacebar` → next image  
+  - `1–9` → select class  
+- 🧽 Ctrl + Click to erase boxes  
+- ❌ Clear all = auto-delete annotation and image  
+- 🔄 Auto-load previous annotations if found  
+- 🧠 Dynamic class system with YAML or GUI  
+
+---
+
+## 📦 Installation
+
+Install required libraries:
+
+```bash
+pip install PyQt5 pyyaml
+Or use the requirements file:
+
+bash
+Copy code
+pip install -r requirements.txt
+✅ If you're using pyinstaller to make an EXE, others don’t need to install these.
+
+📁 Folder Structure
+After selecting input and output folders:
+
+sql
+Copy code
 output/
 ├── images/   → contains copied annotated images
 └── labels/   → contains .txt files with YOLO-style annotations
-```
+YOLO label format:
 
-Each label `.txt` file has this format:
-
-```
+php-template
+Copy code
 <class_id> <x_center> <y_center> <width> <height>
-```
+All values are normalized to [0, 1].
 
-All values are **normalized** to [0, 1].
+⚙️ Class Configuration
+YAML Auto-Generation
+On first launch, a classes.yaml file is created automatically at:
 
----
+bash
+Copy code
+Windows: C:\Users\<YourName>\AppData\Local\VenusAnnotator\classes.yaml  
+Linux/macOS: ~/.config/VenusAnnotator/classes.yaml
+Example Structure:
+yaml
+Copy code
+classes:
+  - id: 1
+    name: "Round Worm"
+  - id: 2
+    name: "Hook Worm"
+  - id: 3
+    name: "Whip Worm"
+✅ Or use the "Edit Classes" GUI to manage classes (no YAML editing required).
 
-## ⚙️ Class Configuration
+🎥 How to Use
+Launch the EXE or run the script
 
-- On first launch, a `classes.yaml` file is auto-generated in:
-  ```
-  C:\Users\<YourName>\AppData\Local\VenusAnnotator\classes.yaml
-  ```
-- You can **edit classes using the GUI** (via the "Edit Classes" button).
-- Colors are assigned automatically from a friendly color palette.
+Select Images Folder
 
-No manual YAML editing is required.
+Select Output Folder
 
----
+Draw bounding boxes
 
-## 🎥 How to Use
+Press Space to go to next image
 
-1. **Launch** the EXE or run the Python script.
-2. Click **"Select Images Folder"** to load your dataset.
-3. Click **"Select Output Folder"** to store results.
-4. **Draw boxes** by dragging on the image.
-5. Use class buttons or keys `1`–`9` to assign classes.
-6. **Save manually** or press **Spacebar** to go to the next image (auto-save enabled).
-7. Use **"Clear All Boxes"** to remove all annotations.
-8. Use **"Edit Classes"** to change your labels at any time.
+Use class buttons or keys 1–9
 
----
+Save annotations or auto-save on switch
 
-## 🛠️ Building the EXE
+Use Edit Classes to update labels
 
-Use `pyinstaller` to bundle the app:
+Clear boxes to auto-remove annotations
 
-```bash
+🛠️ Building the EXE
+bash
+Copy code
 pip install pyinstaller
 pyinstaller --noconsole --onefile your_script.py
-```
+With icon and name:
 
-Or, to include an icon and name:
-
-```bash
+bash
+Copy code
 pyinstaller --noconsole --onefile --name VenusAnnotator --icon=icon.ico your_script.py
-```
+✅ classes.yaml is created automatically — no need to bundle it.
 
-> ✅ No need to bundle `classes.yaml` — the app will create it on first run.
+🧾 Developer Notes – How to Customize
+1. Class Loading
+📍 load_classes() ~ Line 95
 
----
+python
+Copy code
+default_yaml = { "classes": [...] }
+2. UI Class Buttons
+📍 setup_ui() ~ Line 160
 
-## 📷 Screenshot
+python
+Copy code
+for idx, cls in enumerate(self.classes):
+3. Saving Annotations
+📍 save_annotation() ~ Line 940
 
-*You can add demo screenshots here!*
+python
+Copy code
+f.write(f"{cid} {x_center:.6f} {y_center:.6f} {w:.6f} {h:.6f}\n")
+4. Auto-delete Empty Annotations
+📍 save_annotation() ~ Line 926
 
----
+python
+Copy code
+if not self.boxes:
+    os.remove(label_output_path)
+5. Class Editor Window
+📍 edit_classes() ~ Line 330
 
-## 📃 License
+python
+Copy code
+table = QTableWidget(len(self.classes), 2)
+6. Output Structure
+📍 select_output_folder() ~ Line 610
 
+python
+Copy code
+self.labels_output = os.path.join(self.output_folder, "labels")
+📁 Example Project Structure
+vbnet
+Copy code
+VIA-Annotator/
+├── via_annotator.py
+├── README.md
+├── assets/
+│   └── demo-thumbnail.png
+├── requirements.txt
+└── classes.yaml  ← Optional (auto-generated if not present)
+📃 License
 MIT License — use freely and share with others.
 
----
-
-## 🤝 Credits
-
+🤝 Credits
 Created by an enthusiast for the global coding community ❤️
 
----
-
-## 🛠️ Developer Notes – How to Customize
-
-If you want to adapt or extend the tool, here are key parts of the code you may want to change:
-
-### 🔧 1. Class Definitions & Color Assignment
-📍 In `load_classes()` – Line ~95
-
-```python
-def load_classes(self):
-    ...
-    default_yaml = {
-        "classes": [
-            {"id": 1, "name": "Round Worm"},
-            {"id": 2, "name": "Hook Worm"},
-            {"id": 3, "name": "Whip Worm"}
-        ]
-    }
-```
-
-> 📝 You can change default classes or customize how color is auto-assigned from a palette.
+yaml
+Copy code
 
 ---
 
-### 🎨 2. UI Class Button Creation
-📍 In `setup_ui()` – Line ~160
-
-```python
-for idx, cls in enumerate(self.classes):
-    display_text = f"{cls['name']} ({cls['color_name']})"
-    btn = QRadioButton(display_text)
-    ...
-```
-
-> 📝 Modify how classes are shown on screen, or style them differently.
-
----
-
-### 💾 3. Saving Annotations (YOLO Format)
-📍 In `save_annotation()` – Line ~940
-
-```python
-f.write(f"{cid} {x_center:.6f} {y_center:.6f} {w:.6f} {h:.6f}\n")
-```
-
-> 📝 You can change the annotation format or output logic here.
-
----
-
-### 🧼 4. Auto-remove empty annotations
-📍 Still in `save_annotation()` – Line ~926
-
-```python
-if not self.boxes:
-    if os.path.exists(label_output_path):
-        os.remove(label_output_path)
-```
-
-> 📝 This is where the tool deletes the annotation and image copy if no boxes exist.
-
----
-
-### ⚙️ 5. Class Editing Window (Dialog Logic)
-📍 In `edit_classes()` – Line ~330
-
-```python
-table = QTableWidget(len(self.classes), 2)
-...
-add_btn.clicked.connect(on_add_row)
-remove_btn.clicked.connect(on_remove_row)
-```
-
-> 📝 You can expand this to support extra fields, like description or class hierarchy.
-
----
-
-### 📤 6. Output Folder Structure
-📍 In `select_output_folder()` – Line ~610
-
-```python
-self.images_output = os.path.join(self.output_folder, "images")
-self.labels_output = os.path.join(self.output_folder, "labels")
-```
-
-> 📝 Change where or how outputs are stored if needed.
-
----
-
-Feel free to fork the repo and make improvements!
+Let me know your real `.exe` download link if you'd like it already embedded!
