@@ -63,16 +63,19 @@ Install required libraries:
 ```bash
 pip install PyQt5 pyyaml
 Or use the requirements file:
+```
 
-bash
+```bash
 Copy code
 pip install -r requirements.txt
+```
+
 ✅ If you're using pyinstaller to make an EXE, others don’t need to install these.
 
 📁 Folder Structure
 After selecting input and output folders:
 
-sql
+```sql
 Copy code
 output/
 ├── images/   → contains copied annotated images
@@ -84,11 +87,12 @@ Copy code
 <class_id> <x_center> <y_center> <width> <height>
 All values are normalized to [0, 1].
 
+```
 ⚙️ Class Configuration
 YAML Auto-Generation
 On first launch, a classes.yaml file is created automatically at:
 
-bash
+```bash
 Copy code
 Windows: C:\Users\<YourName>\AppData\Local\VenusAnnotator\classes.yaml  
 Linux/macOS: ~/.config/VenusAnnotator/classes.yaml
@@ -103,6 +107,7 @@ classes:
   - id: 3
     name: "Whip Worm"
 ✅ Or use the "Edit Classes" GUI to manage classes (no YAML editing required).
+```
 
 🎥 How to Use
 Launch the EXE or run the script
