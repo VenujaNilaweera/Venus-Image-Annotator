@@ -186,11 +186,11 @@ Example Structure:
 ```yaml
 classes:
   - id: 1
-    name: "Round Worm"
+    name: "human"
   - id: 2
-    name: "Hook Worm"
+    name: "dog"
   - id: 3
-    name: "Whip Worm"
+    name: "cat"
 ```
 
 ✅ Or use the "Edit Classes" GUI to manage classes (no YAML editing required).
