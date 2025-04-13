@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://github.com/VenujaNilaweera/Venus-Image-Annotator/blob/main/assets/logoVIA.png?raw=true" alt="VIA Logo" width="200"/>
-</p
+</p>
 
 
 # Venus Image Annotator
