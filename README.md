@@ -9,7 +9,7 @@ Venus Image Annotator is a fast, user-friendly, and modern tool for drawing boun
 
 ## 🖥️ Download
 
-👉 [Click here to download the latest VIA application (.exe)](insert-your-download-link-here)
+👉 [Click here to download the latest VIA application (.exe)]([insert-your-download-link-here](https://github.com/VenujaNilaweera/Venus-Image-Annotator/releases))
 
 **✅ No installation needed — just run it!**
 
