@@ -1,6 +1,9 @@
 <p align="center">
-  <img src="https://github.com/VenujaNilaweera/Venus-Image-Annotator/blob/main/assets/logoVIA.png?raw=true" alt="VIA Logo" width="200"/>
+  <img src="assets/logoVIA.png" alt="VIA Logo" width="250" height="250">
 </p>
+
+<h1 align="center">🖼️ Venus Image Annotator</h1>
+<p align="center"><i>Fast, minimal, and YOLO-friendly image bounding box tool</i></p>
 
 # Venus Image Annotator
 
