@@ -257,17 +257,6 @@ classes:
 
 ✅ Or use the "Edit Classes" GUI to manage classes (no YAML editing required).
 
-## 🎥 How to Use
-
-1. Launch the EXE or run the script
-2. Select Images Folder
-3. Select Output Folder
-4. Draw bounding boxes
-5. Press Space to go to next image
-6. Use class buttons or keys 1–9
-7. Save annotations or auto-save on switch
-8. Use Edit Classes to update labels
-9. Clear boxes to auto-remove annotations
 
 ## 🛠️ Building the EXE
 
