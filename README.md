@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logoVIA.png" alt="VIA Logo" width="480" height="300">
+  <img src="assets/logoVIA.png" alt="VIA Logo" width="520" height="300">
 </p>
 
 <h1 align="center">Venus Image Annotator</h1>
