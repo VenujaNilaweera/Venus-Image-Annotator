@@ -53,6 +53,93 @@ While most open-source annotation tools offer basic box drawing and label saving
 - 🔄 Auto-load previous annotations if found
 - 🧠 Dynamic class system with YAML or GUI
 
+## 💻 Getting the Code & Implementation
+
+### Clone the Repository
+```bash
+git clone https://github.com/yourusername/venus-image-annotator.git
+cd venus-image-annotator
+```
+
+### Setting Up the Development Environment
+
+1. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install required libraries:
+```bash
+pip install PyQt5 pyyaml
+```
+
+Or use the requirements file:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the application:
+```bash
+python via_annotator.py
+```
+
+### Implementation for Your Own Project
+
+To integrate Venus Image Annotator into your own project:
+
+1. Copy the core files:
+   - `via_annotator.py` (main application)
+   - `classes.yaml` (if you have predefined classes)
+
+2. Import and use in your code:
+```python
+from via_annotator import VenusAnnotator
+
+# Initialize the application
+app = QApplication(sys.argv)
+annotator = VenusAnnotator()
+annotator.show()
+sys.exit(app.exec_())
+```
+
+## 🔄 Updating & Customizing the Code
+
+### Adding New Features
+
+1. Fork the repository
+2. Create a feature branch:
+```bash
+git checkout -b feature/your-new-feature
+```
+
+3. Make your changes to the code
+4. Test thoroughly
+5. Submit a pull request
+
+### Common Customization Points
+
+1. **Adding new annotation types** (e.g., polygons, lines):
+   - Modify `draw_box` method in `via_annotator.py`
+   - Add new drawing tools to the UI
+
+2. **Customizing output format**:
+   - Modify `save_annotation` method to support your format
+   - Update the loading functions to recognize your format
+
+3. **Adding new keyboard shortcuts**:
+   - Find the `keyPressEvent` method and add your shortcuts
+
+4. **UI Customization**:
+   - All UI elements are defined in the `setup_ui` method
+   - Modify colors, sizes, and layouts as needed
+
+### Troubleshooting Common Issues
+
+- **Classes not loading?** Check your YAML file format and make sure paths are correct
+- **UI elements not appearing?** Ensure PyQt5 is properly installed
+- **Performance issues with large images?** Consider implementing image downscaling
+
 ## 📦 Installation
 
 Install required libraries:
