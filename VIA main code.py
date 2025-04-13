@@ -84,9 +84,9 @@ class BoundingBoxAnnotator(QMainWindow):
         if not os.path.exists(self.yaml_path):
             default_yaml = {
                 "classes": [
-                    {"id": 1, "name": "Round Worm"},
-                    {"id": 2, "name": "Hook Worm"},
-                    {"id": 3, "name": "Whip Worm"}
+                    {"id": 1, "name": "Human"},
+                    {"id": 2, "name": "dog"},
+                    {"id": 3, "name": "cat"}
                 ]
             }
             try:
@@ -104,9 +104,9 @@ class BoundingBoxAnnotator(QMainWindow):
         except Exception as e:
             print(f"Error loading classes.yaml: {e}. Using default classes.")
             self.classes = [
-                {"id": 1, "name": "Round Worm"},
-                {"id": 2, "name": "Hook Worm"},
-                {"id": 3, "name": "Whip Worm"}
+                {"id": 1, "name": "human"},
+                {"id": 2, "name": "dog"},
+                {"id": 3, "name": "cat"}
             ]
 
         # Named color choices for random assignment.
