@@ -75,7 +75,7 @@ Venus Image Annotator is a fast, user-friendly, and modern tool for drawing boun
 
 > **Pro Tip:** You don't need to manually save! Annotations are automatically saved when you move to the next image.
 
-## 💎 Why Venus Annotator is Better Than Most Annotation Tools
+## 💎 Why this Annotator easier 
 
 While most open-source annotation tools offer basic box drawing and label saving, Venus Annotator focuses on developer ease, speed, and flexibility. Here's what makes it stand out:
 
