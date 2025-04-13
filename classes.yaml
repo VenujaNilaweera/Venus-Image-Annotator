@@ -1,9 +1,9 @@
 classes:
   - id: 1
-    name: "Round Worm"
+    name: "human"
   - id: 2
-    name: "Hook Worm"
+    name: "dog"
   - id: 3
-    name: "whip Worm"
+    name: "cat"
   - id: 4
-    name: "kik Worm"
+    name: "car"
