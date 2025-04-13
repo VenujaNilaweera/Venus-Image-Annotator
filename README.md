@@ -2,10 +2,8 @@
   <img src="assets/logo VIA.png" alt="VIA Logo" width="250" height="250">
 </p>
 
-<h1 align="center">🖼️ Venus Image Annotator</h1>
+<h1 align="center">Venus Image Annotator</h1>
 <p align="center"><i>Fast, minimal, and YOLO-friendly image bounding box tool</i></p>
-
-# Venus Image Annotator
 
 Venus Image Annotator is a fast, user-friendly, and modern tool for drawing bounding boxes and saving annotations in YOLO format. Designed for both beginners and professionals working on image labeling and machine learning datasets.
 
