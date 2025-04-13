@@ -13,6 +13,68 @@ Venus Image Annotator is a fast, user-friendly, and modern tool for drawing boun
 
 **✅ No installation needed — just run it!**
 
+## 📖 User Manual - How to Get Started
+
+<div align="center">
+
+### 🚀 QUICK START GUIDE 🚀
+
+</div>
+
+<table>
+<tr>
+<td width="50%" align="center">
+<h3>📁 Step 1: Select Input Folder</h3>
+<ul align="left">
+<li>Launch the application</li>
+<li>Click <b>"Select Images Folder"</b></li>
+<li>Browse and select the folder containing your images</li>
+</ul>
+</td>
+<td width="50%" align="center">
+<h3>💾 Step 2: Set Output Folder</h3>
+<ul align="left">
+<li>Click <b>"Select Output Folder"</b></li>
+<li>Choose where to save annotations and processed images</li>
+<li>Folders will be created automatically</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<h3>🏷️ Step 3: Configure Classes</h3>
+<ul align="left">
+<li>Click <b>"Edit Classes"</b> button</li>
+<li>In the popup window, add/edit/remove classes</li>
+<li>Each class gets auto-assigned a color</li>
+<li>Click <b>"Save"</b> when done</li>
+</ul>
+</td>
+<td width="50%" align="center">
+<h3>✏️ Step 4: Start Annotating!</h3>
+<ul align="left">
+<li>Click and drag to draw boxes around objects</li>
+<li>Select different classes using number keys 1-9</li>
+<li>Ctrl+Click inside a box to delete it</li>
+<li>Use mouse wheel to zoom in/out</li>
+</ul>
+</td>
+</tr>
+</table>
+
+### ⌨️ Time-Saving Shortcuts
+
+| Action | How To Do It |
+|--------|--------------|
+| **Go to next image** | Press **Spacebar** (auto-saves current annotations) |
+| **Go to previous image** | Click **"Previous"** button |
+| **Change class** | Press keys **1-9** to quickly switch between classes |
+| **Delete a box** | **Ctrl+Click** inside the box you want to remove |
+| **Clear all boxes** | Click **"Clear"** button (removes annotation file too) |
+| **Zoom in/out** | Use **mouse wheel** (anchored zoom at cursor position) |
+
+> **Pro Tip:** You don't need to manually save! Annotations are automatically saved when you move to the next image.
+
 ## 💎 Why Venus Annotator is Better Than Most Annotation Tools
 
 While most open-source annotation tools offer basic box drawing and label saving, Venus Annotator focuses on developer ease, speed, and flexibility. Here's what makes it stand out:
@@ -179,7 +241,7 @@ On first launch, a `classes.yaml` file is created automatically at:
 
 ```
 Windows: C:\Users\<YourName>\AppData\Local\VenusAnnotator\classes.yaml  
-Linux/macOS: ~/.config/VenusAnnotator/classes.yaml
+Linux/macOS: ~/.config/VenusAnnotator\classes.yaml
 ```
 
 Example Structure:
